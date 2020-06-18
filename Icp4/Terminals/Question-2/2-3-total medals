@@ -1,0 +1,139 @@
+[cloudera@quickstart ~]$ hive
+
+Logging initialized using configuration in file:/etc/hive/conf.dist/hive-log4j.properties
+WARNING: Hive CLI is deprecated and migration to Beeline is recommended.
+hive> select country,SUM(total) from olympic GROUP BY country;
+Query ID = cloudera_20200617152424_336300e3-cddc-4942-846b-3ec010032090
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1592420420639_0019, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1592420420639_0019/
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1592420420639_0019
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2020-06-17 15:25:16,117 Stage-1 map = 0%,  reduce = 0%
+2020-06-17 15:25:36,479 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.37 sec
+2020-06-17 15:25:54,437 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 7.89 sec
+MapReduce Total cumulative CPU time: 7 seconds 890 msec
+Ended Job = job_1592420420639_0019
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 7.89 sec   HDFS Read: 527102 HDFS Write: 1315 SUCCESS
+Total MapReduce CPU Time Spent: 7 seconds 890 msec
+OK
+Afghanistan	2
+Algeria	8
+Argentina	141
+Armenia	10
+Australia	609
+Austria	91
+Azerbaijan	25
+Bahamas	24
+Bahrain	1
+Barbados	1
+Belarus	97
+Belgium	18
+Botswana	1
+Brazil	221
+Bulgaria	41
+Cameroon	20
+Canada	370
+Chile	22
+China	530
+Chinese Taipei	20
+Colombia	13
+Costa Rica	2
+Croatia	81
+Cuba	188
+Cyprus	1
+Czech Republic	81
+Denmark	89
+Dominican Republic	5
+Ecuador	1
+Egypt	8
+Eritrea	1
+Estonia	18
+Ethiopia	29
+Finland	118
+France	318
+Gabon	1
+Georgia	23
+Germany	629
+Great Britain	322
+Greece	59
+Grenada	1
+Guatemala	1
+Hong Kong	3
+Hungary	145
+Iceland	15
+India	11
+Indonesia	22
+Iran	24
+Ireland	9
+Israel	4
+Italy	331
+Jamaica	80
+Japan	282
+Kazakhstan	42
+Kenya	39
+Kuwait	2
+Kyrgyzstan	3
+Latvia	17
+Lithuania	30
+Macedonia	1
+Malaysia	3
+Mauritius	1
+Mexico	38
+Moldova	5
+Mongolia	10
+Montenegro	14
+Morocco	11
+Mozambique	1
+Netherlands	318
+New Zealand	52
+Nigeria	39
+North Korea	21
+Norway	192
+Panama	1
+Paraguay	17
+Poland	80
+Portugal	9
+Puerto Rico	2
+Qatar	3
+Romania	123
+Russia	768
+Saudi Arabia	6
+Serbia	31
+Serbia and Montenegro	38
+Singapore	7
+Slovakia	35
+Slovenia	25
+South Africa	25
+South Korea	308
+Spain	205
+Sri Lanka	1
+Sudan	1
+Sweden	181
+Switzerland	93
+Syria	1
+Tajikistan	3
+Thailand	18
+Togo	1
+Trinidad and Tobago	19
+Tunisia	4
+Turkey	28
+Uganda	1
+Ukraine	143
+United Arab Emirates	1
+United States	1312
+Uruguay	1
+Uzbekistan	19
+Venezuela	4
+Vietnam	2
+Zimbabwe	7
+Time taken: 60.09 seconds, Fetched: 110 row(s)
+hive> 

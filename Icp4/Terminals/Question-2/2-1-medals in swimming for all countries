@@ -1,0 +1,63 @@
+[cloudera@quickstart ~]$ hive
+
+Logging initialized using configuration in file:/etc/hive/conf.dist/hive-log4j.properties
+WARNING: Hive CLI is deprecated and migration to Beeline is recommended.
+hive> select country,SUM(total) from olympic where sport = "Swimming" GROUP BY country;
+Query ID = cloudera_20200617152929_6ed27520-92ba-4bfe-b311-cfee948efb11
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1592420420639_0021, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1592420420639_0021/
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1592420420639_0021
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2020-06-17 15:29:32,799 Stage-1 map = 0%,  reduce = 0%
+2020-06-17 15:29:54,451 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 5.09 sec
+2020-06-17 15:30:11,331 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 9.19 sec
+MapReduce Total cumulative CPU time: 9 seconds 190 msec
+Ended Job = job_1592420420639_0021
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 9.19 sec   HDFS Read: 528176 HDFS Write: 386 SUCCESS
+Total MapReduce CPU Time Spent: 9 seconds 190 msec
+OK
+Argentina	1
+Australia	163
+Austria	3
+Belarus	2
+Brazil	8
+Canada	5
+China	35
+Costa Rica	2
+Croatia	1
+Denmark	1
+France	39
+Germany	32
+Great Britain	11
+Hungary	9
+Italy	16
+Japan	43
+Lithuania	1
+Netherlands	46
+Norway	2
+Poland	3
+Romania	6
+Russia	20
+Serbia	1
+Slovakia	2
+Slovenia	1
+South Africa	11
+South Korea	4
+Spain	3
+Sweden	9
+Trinidad and Tobago	1
+Tunisia	3
+Ukraine	7
+United States	267
+Zimbabwe	7
+Time taken: 61.742 seconds, Fetched: 34 row(s)
+hive> 

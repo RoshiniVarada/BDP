@@ -1,0 +1,210 @@
+[cloudera@quickstart ~]$ hive
+
+Logging initialized using configuration in file:/etc/hive/conf.dist/hive-log4j.properties
+WARNING: Hive CLI is deprecated and migration to Beeline is recommended.
+hive> select * from olympic where sport='Shooting' order by year;
+Query ID = cloudera_20200617152020_890b6fcf-42a9-4f7f-ac57-30331c6ef2cd
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1592420420639_0017, Tracking URL = http://quickstart.cloudera:8088/proxy/application_1592420420639_0017/
+Kill Command = /usr/lib/hadoop/bin/hadoop job  -kill job_1592420420639_0017
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2020-06-17 15:20:55,754 Stage-1 map = 0%,  reduce = 0%
+2020-06-17 15:21:20,437 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 4.99 sec
+2020-06-17 15:21:41,417 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 10.35 sec
+MapReduce Total cumulative CPU time: 10 seconds 350 msec
+Ended Job = job_1592420420639_0017
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 10.35 sec   HDFS Read: 529270 HDFS Write: 10496 SUCCESS
+Total MapReduce CPU Time Spent: 10 seconds 350 msec
+OK
+Kim Rhode	21	United States	2000	10-01-00	Shooting	0	0	1	1
+Delphine Racinet-Reau	26	France	2000	10-01-00	Shooting	0	1	0	1
+Giovanni Pellielo	30	Italy	2000	10-01-00	Shooting	0	0	1	1
+Ian Peel	42	Great Britain	2000	10-01-00	Shooting	0	1	0	1
+Niu Zhiyuan	26	China	2000	10-01-00	Shooting	0	0	1	1
+Nancy Napolski-Johnson	26	United States	2000	10-01-00	Shooting	1	0	0	1
+Oleg Moldovan	33	Moldova	2000	10-01-00	Shooting	0	1	0	1
+Lalita Milshina-Yauhleuskaya	36	Belarus	2000	10-01-00	Shooting	0	0	1	1
+Mykola Milchev	32	Ukraine	2000	10-01-00	Shooting	1	0	0	1
+Zemfira Meft?kh?tddinova	37	Azerbaijan	2000	10-01-00	Shooting	1	0	0	1
+Renata Mauer-Rózanska	31	Poland	2000	10-01-00	Shooting	1	0	0	1
+Sergey Martynov	32	Belarus	2000	10-01-00	Shooting	0	0	1	1
+Russell Mark	36	Australia	2000	10-01-00	Shooting	0	1	0	1
+Petr Málek	38	Czech Republic	2000	10-01-00	Shooting	0	1	0	1
+Tanyu Kiryakov	37	Bulgaria	2000	10-01-00	Shooting	1	0	0	1
+Artyom Khadzhibekov	30	Russia	2000	10-01-00	Shooting	0	1	0	1
+Diána Igaly	35	Hungary	2000	10-01-00	Shooting	0	0	1	1
+Juha Hirvi	40	Finland	2000	10-01-00	Shooting	0	1	0	1
+Pia Hansen	34	Sweden	2000	10-01-00	Shooting	1	0	0	1
+Daina Gudzineviciute	34	Lithuania	2000	10-01-00	Shooting	1	0	0	1
+Mariya Grozdeva	28	Bulgaria	2000	10-01-00	Shooting	1	0	0	1
+Torben Grimmel	24	Denmark	2000	10-01-00	Shooting	0	1	0	1
+Todd Graves	37	United States	2000	10-01-00	Shooting	0	0	1	1
+Tatyana Goldobina	24	Russia	2000	10-01-00	Shooting	0	1	0	1
+Deborah Gelisio	24	Italy	2000	10-01-00	Shooting	0	1	0	1
+Gao Jing	24	China	2000	10-01-00	Shooting	0	0	1	1
+Gao E	37	China	2000	10-01-00	Shooting	0	0	1	1
+Gang Cho-Hyeon	17	South Korea	2000	10-01-00	Shooting	0	1	0	1
+Annemarie Forder	22	Australia	2000	10-01-00	Shooting	0	0	1	1
+Mariya Feklistova	24	Russia	2000	10-01-00	Shooting	0	0	1	1
+Richard Faulds	23	Great Britain	2000	10-01-00	Shooting	1	0	0	1
+Jonas Edman	33	Sweden	2000	10-01-00	Shooting	1	0	0	1
+Svetlana Dyomina	39	Russia	2000	10-01-00	Shooting	0	1	0	1
+Franck Dumoulin	28	France	2000	10-01-00	Shooting	1	0	0	1
+Michael Diamond	28	Australia	2000	10-01-00	Shooting	1	0	0	1
+Igor Basinsky	37	Belarus	2000	10-01-00	Shooting	0	1	1	2
+Tao Luna	26	China	2000	10-01-00	Shooting	1	1	0	2
+Rajmond Debevec	37	Slovenia	2000	10-01-00	Shooting	1	0	0	1
+Cai Yalin	23	China	2000	10-01-00	Shooting	1	0	0	1
+Michel Ansermet	35	Switzerland	2000	10-01-00	Shooting	0	1	0	1
+Sergey Alifirenko	41	Russia	2000	10-01-00	Shooting	1	0	0	1
+Yevgeny Aleynikov	33	Russia	2000	10-01-00	Shooting	0	0	1	1
+Fehaid Al-Deehani	33	Kuwait	2000	10-01-00	Shooting	0	0	1	1
+Iulian Raicea	27	Romania	2000	10-01-00	Shooting	0	0	1	1
+Yang Ling	28	China	2000	10-01-00	Shooting	1	0	0	1
+Wang Yifu	39	China	2000	10-01-00	Shooting	0	1	0	1
+Martin Tenk	28	Czech Republic	2000	10-01-00	Shooting	0	0	1	1
+Harald Stenvaag	47	Norway	2000	10-01-00	Shooting	0	0	1	1
+Jasna Šekaric	34	Serbia and Montenegro	2000	10-01-00	Shooting	0	1	0	1
+Wang Zheng	25	China	2004	08-29-04	Shooting	0	0	1	1
+Wang Yifu	43	China	2004	08-29-04	Shooting	1	0	0	1
+Wang Chengyi	21	China	2004	08-29-04	Shooting	0	0	1	1
+Adam Vella	33	Australia	2004	08-29-04	Shooting	0	0	1	1
+Valentina Turisini	35	Italy	2004	08-29-04	Shooting	0	1	0	1
+Jasna Šekaric	38	Serbia and Montenegro	2004	08-29-04	Shooting	0	1	0	1
+Ralf Schumann	42	Germany	2004	08-29-04	Shooting	1	0	0	1
+Juan Miguel Rodríguez	37	Cuba	2004	08-29-04	Shooting	0	0	1	1
+Kim Rhode	25	United States	2004	08-29-04	Shooting	1	0	0	1
+Rajyavardhan Rathore	34	India	2004	08-29-04	Shooting	0	1	0	1
+María Quintanal	34	Spain	2004	08-29-04	Shooting	0	1	0	1
+Sergey Polyakov	36	Russia	2004	08-29-04	Shooting	0	1	0	1
+Christian Planer	29	Austria	2004	08-29-04	Shooting	0	0	1	1
+Giovanni Pellielo	34	Italy	2004	08-29-04	Shooting	0	1	0	1
+Zemfira Meft?kh?tddinova	41	Azerbaijan	2004	08-29-04	Shooting	0	0	1	1
+Sergey Martynov	36	Belarus	2004	08-29-04	Shooting	0	0	1	1
+Dmitry Lykin	30	Russia	2004	08-29-04	Shooting	0	0	1	1
+Christian Lusch	23	Germany	2004	08-29-04	Shooting	0	1	0	1
+Li Jie	31	China	2004	08-29-04	Shooting	0	1	0	1
+Manfred Kurzer	34	Germany	2004	08-29-04	Shooting	1	0	0	1
+Katerina Kurková-Emmons	20	Czech Republic	2004	08-29-04	Shooting	0	0	1	1
+Olena Kostevych	19	Ukraine	2004	08-29-04	Shooting	1	0	0	1
+Kim Jong-Su	27	North Korea	2004	08-29-04	Shooting	0	0	1	1
+Marko Kemppainen	28	Finland	2004	08-29-04	Shooting	0	1	0	1
+Jin Jong-O	24	South Korea	2004	08-29-04	Shooting	0	1	0	1
+Jia Zhanbo	30	China	2004	08-29-04	Shooting	1	0	0	1
+Vladimir Isakov	34	Russia	2004	08-29-04	Shooting	0	0	1	1
+Diána Igaly	39	Hungary	2004	08-29-04	Shooting	1	0	0	1
+Lenka Hyková-Marušková	19	Czech Republic	2004	08-29-04	Shooting	0	1	0	1
+Jozef Gönci	30	Slovakia	2004	08-29-04	Shooting	0	0	1	1
+Gao E	41	China	2004	08-29-04	Shooting	0	0	1	1
+Matt Emmons	23	United States	2004	08-29-04	Shooting	1	0	0	1
+Du Li	22	China	2004	08-29-04	Shooting	1	0	0	1
+Lyubov Galkina	31	Russia	2004	08-29-04	Shooting	1	1	0	2
+Mariya Grozdeva	32	Bulgaria	2004	08-29-04	Shooting	1	0	1	2
+Lee Bo-Na	23	South Korea	2004	08-29-04	Shooting	0	1	1	2
+Mikhail Nestruyev	35	Russia	2004	08-29-04	Shooting	1	1	0	2
+Aleksandr Blinov	22	Russia	2004	08-29-04	Shooting	0	1	0	1
+Andrea Benelli	44	Italy	2004	08-29-04	Shooting	1	0	0	1
+Suzy Balogh	31	Australia	2004	08-29-04	Shooting	1	0	0	1
+Irad? Asumova	46	Azerbaijan	2004	08-29-04	Shooting	0	0	1	1
+Michael Anti	40	United States	2004	08-29-04	Shooting	0	1	0	1
+Aleksey Alipov	29	Russia	2004	08-29-04	Shooting	1	0	0	1
+Sergey Alifirenko	45	Russia	2004	08-29-04	Shooting	0	0	1	1
+Ahmed Al-Maktoum	40	United Arab Emirates	2004	08-29-04	Shooting	1	0	0	1
+Zhu Qinan	19	China	2004	08-29-04	Shooting	1	0	0	1
+Wei Ning	22	China	2004	08-29-04	Shooting	0	1	0	1
+Zhu Qinan	23	China	2008	08-24-08	Shooting	0	1	0	1
+Jason Turner	33	United States	2008	08-24-08	Shooting	0	0	1	1
+Anthony Terras	23	France	2008	08-24-08	Shooting	0	0	1	1
+Tan Zongliang	36	China	2008	08-24-08	Shooting	0	1	0	1
+Yuriy Sukhorukov	40	Ukraine	2008	08-24-08	Shooting	0	1	0	1
+Zuzana Štefeceková	24	Slovakia	2008	08-24-08	Shooting	0	1	0	1
+Ralf Schumann	46	Germany	2008	08-24-08	Shooting	0	1	0	1
+Nino Salukvadze	39	Georgia	2008	08-24-08	Shooting	0	0	1	1
+Kim Rhode	29	United States	2008	08-24-08	Shooting	0	1	0	1
+Christian Reitz	21	Germany	2008	08-24-08	Shooting	0	0	1	1
+Qiu Jian	33	China	2008	08-24-08	Shooting	1	0	0	1
+Warren Potent	46	Australia	2008	08-24-08	Shooting	0	0	1	1
+Oleksandr Petriv	34	Ukraine	2008	08-24-08	Shooting	1	0	0	1
+Giovanni Pellielo	38	Italy	2008	08-24-08	Shooting	0	1	0	1
+Snježana Pejcic	26	Croatia	2008	08-24-08	Shooting	0	0	1	1
+Pang Wei	22	China	2008	08-24-08	Shooting	1	0	0	1
+Nataliya Paderina	32	Russia	2008	08-24-08	Shooting	0	1	0	1
+Otryadyn Gündegmaa	30	Mongolia	2008	08-24-08	Shooting	0	1	0	1
+Satu Mäkelä-Nummela	37	Finland	2008	08-24-08	Shooting	1	0	0	1
+David Kostelecký	33	Czech Republic	2008	08-24-08	Shooting	1	0	0	1
+Vladimir Isakov	38	Russia	2008	08-24-08	Shooting	0	0	1	1
+Hu Binyuan	30	China	2008	08-24-08	Shooting	0	0	1	1
+Vincent Hancock	19	United States	2008	08-24-08	Shooting	1	0	0	1
+Henri Häkkinen	28	Finland	2008	08-24-08	Shooting	0	0	1	1
+Guo Wenjun	24	China	2008	08-24-08	Shooting	1	0	0	1
+Lyubov Galkina	35	Russia	2008	08-24-08	Shooting	0	1	0	1
+Matt Emmons	27	United States	2008	08-24-08	Shooting	0	1	0	1
+Glenn Eller	26	United States	2008	08-24-08	Shooting	1	0	0	1
+Du Li	26	China	2008	08-24-08	Shooting	1	0	0	1
+Munkhbayar Dorjsuren	39	Germany	2008	08-24-08	Shooting	0	0	1	1
+Rajmond Debevec	45	Slovenia	2008	08-24-08	Shooting	0	0	1	1
+Francesco D'Aniello	39	Italy	2008	08-24-08	Shooting	0	1	0	1
+Eglis Yaima Cruz	28	Cuba	2008	08-24-08	Shooting	0	0	1	1
+Corey Cogdell	21	United States	2008	08-24-08	Shooting	0	0	1	1
+Chen Ying	30	China	2008	08-24-08	Shooting	1	0	0	1
+Chiara Cainero	30	Italy	2008	08-24-08	Shooting	1	0	0	1
+Tore Brovold	38	Norway	2008	08-24-08	Shooting	0	1	0	1
+Christine Brinker-Wenzel	27	Germany	2008	08-24-08	Shooting	0	0	1	1
+Abhinav Bindra	25	India	2008	08-24-08	Shooting	1	0	0	1
+Aleksey Alipov	33	Russia	2008	08-24-08	Shooting	0	0	1	1
+Artur Aivazian	35	Ukraine	2008	08-24-08	Shooting	1	0	0	1
+Katerina Kurková-Emmons	24	Czech Republic	2008	08-24-08	Shooting	1	1	0	2
+Jin Jong-O	28	South Korea	2008	08-24-08	Shooting	1	1	0	2
+Zuzana Štefeceková	28	Slovakia	2012	08-12-12	Shooting	0	1	0	1
+Jessica Rossi	20	Italy	2012	08-12-12	Shooting	1	0	0	1
+Kim Rhode	33	United States	2012	08-12-12	Shooting	1	0	0	1
+Delphine Racinet-Reau	38	France	2012	08-12-12	Shooting	0	0	1	1
+Leuris Pupo	35	Cuba	2012	08-12-12	Shooting	1	0	0	1
+Gagan Narang	29	India	2012	08-12-12	Shooting	0	0	1	1
+Vasily Mosin	40	Russia	2012	08-12-12	Shooting	0	0	1	1
+Alin Moldoveanu	29	Romania	2012	08-12-12	Shooting	1	0	0	1
+Sergey Martynov	44	Belarus	2012	08-12-12	Shooting	1	0	0	1
+Ivana Maksimovic	22	Serbia	2012	08-12-12	Shooting	0	1	0	1
+Vijay Kumar	26	India	2012	08-12-12	Shooting	0	1	0	1
+Kim Jong-Hyeon	27	South Korea	2012	08-12-12	Shooting	0	1	0	1
+Kim Jang-Mi	19	South Korea	2012	08-12-12	Shooting	1	0	0	1
+Vincent Hancock	23	United States	2012	08-12-12	Shooting	1	0	0	1
+Guo Wenjun	28	China	2012	08-12-12	Shooting	1	0	0	1
+Anders Golding	28	Denmark	2012	08-12-12	Shooting	0	1	0	1
+Celine Goberville	25	France	2012	08-12-12	Shooting	0	1	0	1
+Massimo Fabbrizi	34	Italy	2012	08-12-12	Shooting	0	1	0	1
+Matt Emmons	31	United States	2012	08-12-12	Shooting	0	0	1	1
+Ding Feng	25	China	2012	08-12-12	Shooting	0	0	1	1
+Rajmond Debevec	49	Slovenia	2012	08-12-12	Shooting	0	0	1	1
+Håkan Dahlby	46	Sweden	2012	08-12-12	Shooting	0	1	0	1
+Lionel Cox	31	Belgium	2012	08-12-12	Shooting	0	1	0	1
+Choi Yeong-Rae	30	South Korea	2012	08-12-12	Shooting	0	1	0	1
+Chen Ying	34	China	2012	08-12-12	Shooting	0	1	0	1
+Giovanni Cernogoraz	29	Croatia	2012	08-12-12	Shooting	1	0	0	1
+Sylwia Bogacka	30	Poland	2012	08-12-12	Shooting	0	1	0	1
+Jamie Beyerle-Gray	28	United States	2012	08-12-12	Shooting	1	0	0	1
+Danka Barteková	27	Slovakia	2012	08-12-12	Shooting	0	0	1	1
+Fehaid Al-Deehani	45	Kuwait	2012	08-12-12	Shooting	0	0	1	1
+Nasser Al-Attiya	41	Qatar	2012	08-12-12	Shooting	0	0	1	1
+Wang Zhiwei	24	China	2012	08-12-12	Shooting	0	0	1	1
+Wei Ning	29	China	2012	08-12-12	Shooting	0	1	0	1
+Peter Wilson	25	Great Britain	2012	08-12-12	Shooting	1	0	0	1
+Yi Siling	23	China	2012	08-12-12	Shooting	1	0	0	1
+Yu Dan	24	China	2012	08-12-12	Shooting	0	0	1	1
+Andrija Zlatic	34	Serbia	2012	08-12-12	Shooting	0	0	1	1
+Jin Jong-O	32	South Korea	2012	08-12-12	Shooting	2	0	0	2
+Niccolò Campriani	24	Italy	2012	08-12-12	Shooting	1	1	0	2
+Olena Kostevych	27	Ukraine	2012	08-12-12	Shooting	0	0	2	2
+Luca Tesconi	30	Italy	2012	08-12-12	Shooting	0	1	0	1
+Adéla Sýkorová	25	Czech Republic	2012	08-12-12	Shooting	0	0	1	1
+Time taken: 71.186 seconds, Fetched: 181 row(s)
+hive> 

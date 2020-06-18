@@ -1,0 +1,8 @@
+[cloudera@quickstart ~]$ hive
+
+Logging initialized using configuration in file:/etc/hive/conf.dist/hive-log4j.properties
+WARNING: Hive CLI is deprecated and migration to Beeline is recommended.
+hive> select distributer_id,year,(vol_IN-vol_OUT) as difference from petrol where (vol_IN-vol_OUT)>500;
+OK
+Time taken: 2.388 seconds
+hive> 
