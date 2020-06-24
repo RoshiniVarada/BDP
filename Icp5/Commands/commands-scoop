@@ -1,0 +1,32 @@
+create table students(s_id INT NOT NULL AUTO_INCREMENT, s_name varchar(10), primary key(s_id));
+
+
+sqoop import --connect jdbc:mysql://localhost/icp5db --username root --password cloudera --table students;
+
+
+create table student_export(id int, name varchar(10));
+
+
+
+
+sqoop export --connect jdbc:mysql://localhost/icp5db --username root --password cloudera --table student_export --export-dir /user/cloudera/students/part-m-00000;
+
+
+create table temperature(date STRING, city varchar(40),mytemp varchar(100));
+
+sqoop import --connect jdbc:mysql://localhost/icp5db --username root --password cloudera --table students2 --hive-import --create-hive-table --hive-table default.students;
+
+
+
+sqoop export --connect jdbc:mysql://localhost/icp5db --username root --password cloudera --table moviesdb --export-dir /user/hive/warehouse/movies/movies.csv
+
+sqoop export --connect jdbc:mysql://localhost/icp5db --username root --password cloudera --table temperature --export-dir /user/hive/warehouse/temperature/tempdataset.txt.csv;
+
+
+CREATE TABLE word_count_movies_updated AS SELECT word, count(1) AS count FROM (SELECT explode(split(concat_ws(',',cast(id as string),title,genre),',')) AS word FROM movies) w GROUP BY word ORDER BY word;
+
+
+analyze table movies compute statistics;
+
+
+select title from moviesnew where title like '%2010%'
