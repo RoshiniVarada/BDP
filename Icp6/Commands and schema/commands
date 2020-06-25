@@ -1,0 +1,135 @@
+
+
+// to generate an instance directory
+
+
+ solrctl instancedir --generate /tmp/musicdata
+
+
+//create and instance inside the directory created
+
+solrctl instancedir --create musicdata /tmp/musicdata
+
+
+//create a collection called music
+
+solrctl collection --create musicdata
+
+
+
+gedit /tmp/musicdata/conf/schema.xml
+
+
+
+
+
+
+
+
+
+reviewerName:"Michael"   -keyword matching
+
+summary:"They Reduce Pop,Boom and Wind Noise"
+
+
+asin:"B0018TAITA" AND overall:"5.0"
+
+
+(asin:"B0018TAITA" AND overall:5.0) OR overall:4.0
+
+
+
+
+reviewerName:Michael*  -wildcard matching
+
+summary:nice*works
+
+reviewText:Not*vibration.
+
+
+
+summary:"good"~4 -proximity
+
+
+overall:[3 TO 4] :range
+
+
+
+(asin:"B0018TAITA" OR asin:"A1HZRYGGNMOWRQ")^1.5 (overall:4.0 OR overall:5.0)   -boost
+
+
+overall:[* TO 4] -range less or equal to 4
+
+overall:[4 TO *] -greater than or eual to 4
+
+overall:[* TO *]-matches all with overall filed
+
+-overall:5.0-matches where overall not 5
+
+
+name:thron~   -fuzzy logic
+
+
+
+// to generate an instance directory
+
+
+ solrctl instancedir --generate /tmp/stock
+
+
+//create and instance inside the directory created
+
+solrctl instancedir --create stock /tmp/stock
+
+
+//create a collection called bookdata
+
+solrctl collection --create stock
+
+
+
+gedit /tmp/stock/conf/schema.xml
+
+
+
+
+
+
+
+name:"A Game of Thrones" -keyword matching
+bookprice:[3 TO 8]
+
+bookauthor:George *  
+
+
+(genre_s:"scifi" OR genre_s:"fantasy")^1.5 (bookprice:7.0 OR bookprice:8.0)
+
+
+bookprice:5.99 AND genre_s:fantasy
+
+bookinStock:true
+
+
+
+q-name:thron~ ,bookprice:7.99  -fuzzy logic with filter
+
+q:catbook:"book" , sort - bookprice desc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
