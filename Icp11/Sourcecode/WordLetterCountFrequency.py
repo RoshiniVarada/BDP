@@ -18,11 +18,6 @@ def main():
     ssc = StreamingContext(sc, 3)   #Streaming will execute in each 3 seconds
     # lines = ssc.textFileStream('log')  #'log/ mean directory name
     lines = ssc.socketTextStream("localhost", 6090)
-    # line  = lines.flatMap(lambda line: line.split(" "))
-    # a = line.flatMap(lambda line:len(line),line)
-    # a.pprint()
-    # counts = line.count(line),line
-    # counts.pprint()
     counts = lines.flatMap(lambda line: line.split(" ")) \
         .map(lambda x: (len(x),x)) \
         .reduceByKey(lambda a, b: a + "," + b)
