@@ -12,7 +12,7 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 import com.google.common.collect.Iterables;
 
-public class PrimeNumberNew {
+public class PrimeNumber {
 
     public static class TokenizerMapper
             extends Mapper<Object, Text, Text, Text> {
@@ -36,7 +36,6 @@ public class PrimeNumberNew {
         ) throws IOException, InterruptedException {
             int k,r = 0;
                  for(Text value:values){
-<<<<<<< HEAD
                          if(Iterables.size(values)<1){
                                   k = Integer.parseInt(value.toString());
                           int m,i,flag=0;
@@ -59,13 +58,6 @@ public class PrimeNumberNew {
 
                       context.write(new Text(Integer.toString(k)),new
 Text(Integer.toString(r)));
-=======
-                         k = Integer.parseInt(value.toString());
-                         int m,i,flag=0;
-                         m=k/2;
-                         if(k==0||k==1){
-                                 r=1;
->>>>>>> 02c2affde9417f556fbb65954fcbd488f0f4caf5
                          }else{
                                   k = Integer.parseInt(value.toString());
                           int m,i,flag=0;
@@ -86,14 +78,10 @@ Text(Integer.toString(r)));
                                   r=0;
                           }
 
-<<<<<<< HEAD
                       context.write(new Text(Integer.toString(k)),new
 Text(Integer.toString(r)));
                          }
 
-=======
-                     context.write(new Text(Integer.toString(k)),new Text(Integer.toString(r)));
->>>>>>> 02c2affde9417f556fbb65954fcbd488f0f4caf5
                  }
 
         }
@@ -102,7 +90,7 @@ Text(Integer.toString(r)));
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
         Job job = Job.getInstance(conf, "prime Number");
-        job.setJarByClass(PrimeNumberNew.class);
+        job.setJarByClass(PrimeNumber.class);
         job.setMapperClass(TokenizerMapper.class);
       //  job.setCombinerClass(IntSumReducer.class);
         job.setReducerClass(IntSumReducer.class);
